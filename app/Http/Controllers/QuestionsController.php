@@ -42,7 +42,7 @@ class QuestionsController extends Controller
         $trip->comment = $request->input('comment');
         $trip->save();
 
-        return redirect()->route('questions.display')->with('success', 'Question added successfully!');
+        return redirect()->route('questions.display')->with('success', 'Your trip was added successfully!');
     }
 
     public function editTrip($id)
@@ -188,6 +188,10 @@ class QuestionsController extends Controller
         ])->post('https://api.openai.com/v1/chat/completions', [
             'model' => 'gpt-3.5-turbo',
             'messages' => [
+                [
+                    'role' => 'system',
+                    'content' => 'You are a helpful and creative travel planner. Based on the user\'s input, generate a unique and well-structured travel plan that includes suggested destinations, activities, and relevant tips for another place similar to the one they entered. Tailor your response to the user\'s preferences, budget, and interests when possible. Keep your response to a maximum of 300 words.',
+                ],
                 [
                     'role' => 'user',
                     'content' => $api_input,

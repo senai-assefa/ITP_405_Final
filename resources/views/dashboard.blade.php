@@ -1,6 +1,6 @@
 <x-app-layout>
-<title>{{ $title ?? config('app.name', 'Laravel') }}</title>
-    <x-slot name="header">
+<x-slot name="title">Welcome To TripShare</x-slot>
+<x-slot name="header">
         <div class="flex space-x-8 items-center">
             <a href="{{ route('dashboard') }}"
                class="text-lg font-semibold text-gray-700 dark:text-gray-300 hover:underline">
@@ -56,7 +56,7 @@
                         <input type="text" id="api_input" name="api_input" required
                             value="{{ old('api_input', session('api_input')) }}"
                             class="mt-1 block w-full rounded-md border-gray-300 text-black"
-                            placeholder="Type something to send to the API...">
+                            placeholder="I really loved going to... becuase of...">
                     </div>
 
                     <div>

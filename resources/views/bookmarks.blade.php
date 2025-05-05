@@ -9,7 +9,7 @@
     <div class="py-12">
         <div class="max-w-5xl mx-auto sm:px-6 lg:px-8 space-y-6">
             @if (session('success'))
-                <div class="bg-green-100 text-green-800 px-4 py-3 rounded-md">
+                <div class="bg-green-100 text-white px-4 py-3 rounded-md">
                     {{ session('success') }}
                 </div>
             @elseif (session('error'))
@@ -55,7 +55,7 @@
                     </div>
                 </div>
             @empty
-                <p class="text-gray-600 dark:text-gray-300">You haven't bookmarked any trips yet.</p>
+                <p class="text-gray-600 dark:text-gray-300">You haven't bookmarked any trips yet. Bookmark one now!</p>
             @endforelse
         </div>
     </div>

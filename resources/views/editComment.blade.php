@@ -25,11 +25,11 @@
                     @method('PUT')
 
                     <div class="mb-4">
-                        <label for="comment" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                        <label for="comment" class="block text-sm font-medium text-white">
                             Update Your Comment
                         </label>
                         <textarea name="comment" id="comment" rows="5" required
-                                  class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-900 dark:text-white shadow-sm">
+                                  class="mt-1 block w-full rounded-md border-gray-300 text-black shadow-sm">
                             {{ old('comment', $comment->comment) }}
                         </textarea>
                     </div>
